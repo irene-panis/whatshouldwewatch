@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import './SearchBar.css'
-import { Names } from '../Names/Names';
+import { Names } from './Names';
 
 export const SearchBar = () => {
   const [usernames, setUsernames] = useState([]);

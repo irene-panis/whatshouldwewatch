@@ -1,4 +1,4 @@
-import { Name } from "../Name/Name";
+import { Name } from "./Name";
 
 export const Names = ({ usernames, onRemove }) => {
   return (
