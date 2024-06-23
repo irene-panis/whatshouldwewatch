@@ -1,4 +1,4 @@
-export const Name = (username, onRemove) => {
+export const Name = ({ username, onRemove }) => {
   return (
     <div>
       <p>{username}</p>
