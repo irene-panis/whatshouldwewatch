@@ -1,3 +1,5 @@
+import './Name.scss'
+
 export const Name = ({ username, onRemove }) => {
   return (
     <div>
