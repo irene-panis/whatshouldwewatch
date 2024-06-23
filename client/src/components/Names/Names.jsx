@@ -1,10 +1,10 @@
+import { Name } from "../Name/Name";
 
-
-export const Names = (usernames) => {
+export const Names = (usernames, onRemove) => {
   return (
     <>
       {usernames.map((username, index) => (
-        <div key={index}>{username}</div>
+        <Name key={index} name={username} onRemove={onRemove}/>
       ))}
     </>
   );
