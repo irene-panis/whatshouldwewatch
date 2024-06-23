@@ -57,6 +57,20 @@ select {
   font: inherit;
 }
 
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.bar-and-btn {
+  display: flex;
+  gap: 1em;
+}
+
 .unbuttonize {
   background-color: transparent;
   border: none;

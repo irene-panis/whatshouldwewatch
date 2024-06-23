@@ -21,7 +21,7 @@ export const SearchBar = () => {
 
   return (
     <>
-      <div>
+      <div className="bar-and-btn">
         <div>
           <label htmlFor="username" className="sr-only">
             Letterboxd Username
@@ -32,6 +32,7 @@ export const SearchBar = () => {
             name="username"
             value={input}
             onChange={handleInputChange}
+            placeholder="Letterboxd username (e.g., irenesucks)"
             required
           />
         </div>
