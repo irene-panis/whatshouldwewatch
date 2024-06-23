@@ -20,12 +20,23 @@ export const SearchBar = () => {
     <>
       <div>
         <div>
-          <label for="username" className="sr-only">Letterboxd Username</label>
-          <input type="text" id="username" name="username" value={input} onChange={handleInputChange} required/>
+          <label for="username" className="sr-only">
+            Letterboxd Username
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={input}
+            onChange={handleInputChange}
+            required
+          />
         </div>
-        <button type="button" onClick={handleAddUser}>Add User</button>
+        <button type="button" onClick={handleAddUser}>
+          Add User
+        </button>
       </div>
-      <Names usernames={usernames}/>
+      <Names usernames={usernames} />
     </>
-  )
+  );
 }
