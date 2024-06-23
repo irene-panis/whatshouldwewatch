@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Names } from '../Names/Names';
+import { SubmitUsers } from '../SubmitUsers/SubmitUsers';
 import './SearchBar.css'
 
 export const SearchBar = () => {
@@ -42,6 +43,7 @@ export const SearchBar = () => {
         </button>
       </div>
       <Names usernames={usernames} onRemove={handleRemoveUser}/>
+      <SubmitUsers usernames={usernames}/>
     </>
   );
 }
