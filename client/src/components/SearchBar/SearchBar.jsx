@@ -3,8 +3,7 @@ import { Names } from '../Names/Names';
 import { SubmitUsers } from '../SubmitUsers/SubmitUsers';
 import './SearchBar.css'
 
-export const SearchBar = () => {
-  const [usernames, setUsernames] = useState([]);
+export const SearchBar = ({ usernames, setUsernames, onSubmit }) => {
 
   const [input, setInput] = useState('');
 
@@ -43,7 +42,7 @@ export const SearchBar = () => {
         </button>
       </div>
       <Names usernames={usernames} onRemove={handleRemoveUser}/>
-      <SubmitUsers usernames={usernames}/>
+      <SubmitUsers onSubmit={onSubmit}/>
     </>
   );
 }
