@@ -16,6 +16,10 @@ export const SearchBar = () => {
     setInput('');
   }
 
+  const handleRemoveUser = (usernameToRemove) => {
+    setUsernames(usernames.filter(username => username !== usernameToRemove));
+  }
+
   return (
     <>
       <div>
@@ -36,7 +40,7 @@ export const SearchBar = () => {
           Add User
         </button>
       </div>
-      <Names usernames={usernames} />
+      <Names usernames={usernames} onRemove={handleRemoveUser}/>
     </>
   );
 }
