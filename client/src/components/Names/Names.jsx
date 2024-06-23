@@ -4,7 +4,7 @@ export const Names = ({ usernames, onRemove }) => {
   return (
     <>
       {usernames.map((username, index) => (
-        <Name key={index} name={username} onRemove={onRemove}/>
+        <Name key={index} username={username} onRemove={onRemove}/>
       ))}
     </>
   );
