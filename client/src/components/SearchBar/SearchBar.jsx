@@ -24,7 +24,7 @@ export const SearchBar = () => {
     <>
       <div>
         <div>
-          <label for="username" className="sr-only">
+          <label htmlFor="username" className="sr-only">
             Letterboxd Username
           </label>
           <input
