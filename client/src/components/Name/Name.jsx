@@ -1,3 +1,5 @@
+import './Name.css'
+
 export const Name = ({ username, onRemove }) => {
   return (
     <div className="name">

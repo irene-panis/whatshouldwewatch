@@ -1,4 +1,5 @@
-import { Name } from "./Name";
+import './Names.css'
+import { Name } from "../Name/Name";
 
 export const Names = ({ usernames, onRemove }) => {
   return (
