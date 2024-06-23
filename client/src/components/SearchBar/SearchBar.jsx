@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './SearchBar.scss'
+import { Names } from '../Names/Names';
 
 export const SearchBar = () => {
   const [usernames, setUsernames] = useState([]);
@@ -24,6 +25,7 @@ export const SearchBar = () => {
         </div>
         <button type="button" onClick={handleAddUser}>Add User</button>
       </div>
+      <Names usernames={usernames}/>
     </>
   )
 }
