@@ -1,5 +1,8 @@
 body {
   font-size: 16px;
+  color: #fe7f00;
+  background-color: #1f272f;
+  padding: 0 1em;
 }
 
 div#root {
@@ -16,6 +19,7 @@ main {
   align-items: center;
   text-align: center;
   margin: 20vh auto 0 auto;
+  max-width: 45em;
 }
 
 h1 {
