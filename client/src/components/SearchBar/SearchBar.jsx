@@ -3,7 +3,7 @@ import { Names } from '../Names/Names';
 import { SubmitUsers } from '../SubmitUsers/SubmitUsers';
 import './SearchBar.css'
 
-export const SearchBar = ({ usernames, setUsernames, onSubmit }) => {
+export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => {
 
   const [input, setInput] = useState('');
 
@@ -41,6 +41,7 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit }) => {
           Add User
         </button>
       </div>
+      {!validArray && <p>Please make sure you have between 2 and 10 users added.</p>}
       {usernames.length !== 0 && <Names usernames={usernames} onRemove={handleRemoveUser}/>}
       <SubmitUsers onSubmit={onSubmit}/>
     </>
