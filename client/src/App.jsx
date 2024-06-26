@@ -13,8 +13,10 @@ function App() {
   return (
     <>
       <main>
-        <h1>what should we watch?</h1>
-        <h2>Enter 2+ Letterboxd usernames below to find the overlap between your watchlists.</h2>
+        <div className="text">
+          <h1>what should we watch?</h1>
+          <h2>Enter 2+ Letterboxd usernames below to find the overlap between your watchlists.</h2>
+        </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers}/>
         {results && <Results results={results}/>}
       </main>

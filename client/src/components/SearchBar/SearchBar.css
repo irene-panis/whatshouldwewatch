@@ -9,5 +9,14 @@
 
 .bar-and-btn {
   display: flex;
+  justify-content: center;
   gap: 1em;
+}
+
+.bar-and-btn > div {
+  flex: 1;
+}
+
+input {
+  width: 100%;
 }

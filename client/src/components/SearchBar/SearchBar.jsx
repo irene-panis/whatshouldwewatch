@@ -41,7 +41,7 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit }) => {
           Add User
         </button>
       </div>
-      <Names usernames={usernames} onRemove={handleRemoveUser}/>
+      {usernames.length !== 0 && <Names usernames={usernames} onRemove={handleRemoveUser}/>}
       <SubmitUsers onSubmit={onSubmit}/>
     </>
   );
