@@ -59,6 +59,7 @@ select {
 
 * {
   text-transform: lowercase;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
