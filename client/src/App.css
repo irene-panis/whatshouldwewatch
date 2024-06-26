@@ -15,7 +15,7 @@ main {
   gap: 1em;
   align-items: center;
   text-align: center;
-  margin: 10em auto;
+  margin: 20vh auto 0 auto;
 }
 
 h1 {
