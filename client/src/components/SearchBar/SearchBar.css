@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+  width: 100%;
 }
 
 .bar-and-btn > div {
