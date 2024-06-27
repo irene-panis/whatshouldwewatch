@@ -7,11 +7,30 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => 
 
   const [input, setInput] = useState('');
 
+  const [validUsername, setValidUsername] = useState(true);
+
   const handleInputChange = (e) => {
     setInput(e.target.value);
+    setValidUsername(true);
   }
 
-  const handleAddUser = () => {
+  const checkUsername = (username) => {
+    // check length and alphanum/underscores
+    if (username.length < 2 || username.length > 10) {
+      return false;
+    }
+    const pattern = /^[a-zA-Z0-9_]+$/;
+    if (!pattern.test(username)) {
+      return false;
+    }
+    return true;
+  }
+
+  const handleAddUser = (username) => {
+    if (!checkUsername(username)) {
+      setValidUsername(false);
+      return;
+    }
     setUsernames([...usernames, input]);
     setInput('');
   }
@@ -37,10 +56,11 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => 
             required
           />
         </div>
-        <button type="button" onClick={handleAddUser}>
+        <button type="button" onClick={() => handleAddUser(input)}>
           Add User
         </button>
       </div>
+      {!validUsername && <p>Usernames must be 2-15 characters and only contain letters, numbers, or underscores.</p>}
       {!validArray && <p>Please make sure you have between 2 and 10 users added.</p>}
       {usernames.length !== 0 && <Names usernames={usernames} onRemove={handleRemoveUser}/>}
       <SubmitUsers onSubmit={onSubmit}/>
