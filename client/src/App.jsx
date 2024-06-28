@@ -23,7 +23,7 @@ function App() {
   }
   useEffect(() => {
     setValidArray(true);
-  }, [usernames])
+  }, [usernames]);
 
   return (
     <>
@@ -40,4 +40,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
