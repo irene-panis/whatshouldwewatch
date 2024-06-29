@@ -13,14 +13,26 @@ function App() {
     return (usernames.length >= 2 && usernames.length <= 10);
   }
   const [validArray, setValidArray] = useState(true);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:5000');
+      return response.json();
+    } catch (err) {
+      console.error("Error fetching data", err);
+    }
+  }
+
   const handleSubmitUsers = () => {
     if (!checkArray(usernames)) {
       setValidArray(false);
       setResults(null);
       return;
     }
-    setResults(usernames);
+    const data = fetchData();
+    setResults(data.message);
   }
+
   useEffect(() => {
     setValidArray(true);
   }, [usernames]);
