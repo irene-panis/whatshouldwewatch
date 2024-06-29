@@ -23,14 +23,15 @@ function App() {
     }
   }
 
-  const handleSubmitUsers = () => {
+  const handleSubmitUsers = async () => {
     if (!checkArray(usernames)) {
       setValidArray(false);
       setResults(null);
       return;
     }
-    const data = fetchData();
-    setResults(data.message);
+    const data = await fetchData();
+    console.log(data);
+    setResults(data.movies);
   }
 
   useEffect(() => {

@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app)
 
 def my_function():
-  result = {"message": "This is the result of my function."}
+  result = {"movies": ['Booksmart', 'The Social Network', 'Gone Girl']}
   return result
 
 @app.route("/")
