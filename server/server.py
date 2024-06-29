@@ -1,5 +1,8 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 def my_function():
   result = {"message": "This is the result of my function."}
