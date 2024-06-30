@@ -23,7 +23,11 @@ function App() {
         },
         body: JSON.stringify({ usernames })
       });
-      return response.json();
+      const data = await response.json();
+      if (data.error) {
+        return data.message;
+      }
+      return data;
     } catch (err) {
       console.error("Error fetching data", err);
     }
@@ -36,7 +40,7 @@ function App() {
       return;
     }
     const data = await fetchData();
-    setResults(data.movies);
+    setResults(data);
   }
 
   useEffect(() => {
