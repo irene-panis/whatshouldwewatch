@@ -7,7 +7,7 @@ export const Results = ({ results }) => {
         {
           results ? (
             results.map((movie, index) => (
-              <p key={index} className="result">{movie}</p>
+              <p key={index} className="result">{movie.title}</p>
             ))
           ) : (
             <p>0 overlaps found. Please try again.</p>

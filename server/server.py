@@ -7,5 +7,5 @@ CORS(app)
 
 @app.route("/")
 def hello_world():
-  result = {'data': find_overlap()}
+  result = {'movies': find_overlap()}
   return jsonify(result)

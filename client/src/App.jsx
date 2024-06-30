@@ -30,7 +30,6 @@ function App() {
       return;
     }
     const data = await fetchData();
-    console.log(data);
     setResults(data.movies);
   }
 

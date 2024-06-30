@@ -17,7 +17,4 @@ def find_overlap():
       'title': irene_wl['data'][key]['name'],
       'link': irene_wl['data'][key]['url']
     })
-  print(common_keys)
-  print("Common Keys:", names)
-
-find_overlap()
+  return names
