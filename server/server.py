@@ -1,14 +1,11 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from index import find_overlap
 
 app = Flask(__name__)
 CORS(app)
 
-def my_function():
-  result = {"movies": ['Booksmart', 'The Social Network', 'Gone Girl']}
-  return result
-
 @app.route("/")
 def hello_world():
-  result = my_function()
+  result = {'data': find_overlap()}
   return jsonify(result)
