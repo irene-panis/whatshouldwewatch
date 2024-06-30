@@ -16,7 +16,7 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => 
 
   const checkUsername = (username) => {
     // check length and alphanum/underscores
-    if (username.length < 2 || username.length > 10) {
+    if (username.length < 2 || username.length > 15) {
       return false;
     }
     const pattern = /^[a-zA-Z0-9_]+$/;
