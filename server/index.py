@@ -1,20 +1,54 @@
 from letterboxdpy import user
+from collections import defaultdict
+
+class UserNotFoundException(Exception):
+  pass
 
 def find_overlap(usernames):
-  # grab user watchlists
-  user1 = user.User(usernames[0])
-  user2 = user.User(usernames[1])
-  user1_wl = user.user_watchlist(user1)
-  user2_wl = user.user_watchlist(user2)
-  # make sets out of data props then find intersection
-  keys_dict1 = set(user1_wl['data'].keys())
-  keys_dict2 = set(user2_wl['data'].keys())
-  common_keys = keys_dict1.intersection(keys_dict2)
-  # given array of overlapping movies, for each movie grab name and link
-  names = []
-  for key in common_keys:
-    names.append({
-      'title': user1_wl['data'][key]['name'],
-      'link': user1_wl['data'][key]['url']
-    })
-  return names
+  movie_counts = defaultdict(int)
+  movie_details = {}
+
+  for username in usernames:
+    try:
+      user_instance = user.User(username)
+      user_wl = user.user_watchlist(user_instance)
+          
+      if not user_wl['data'].keys():
+        # Return a specific response for an empty watchlist
+        return {
+          "error": True,
+          "message": f"Watchlist for user {username} is empty."
+        }
+
+      for key, movie in user_wl['data'].items():
+        movie_counts[key] += 1
+        movie_details[key] = {
+          'title': movie['name'],
+          'link': movie['url']
+        }
+      
+    except UserNotFoundException:
+      return {
+          "error": True,
+          "message": f"User {username} not found."
+      }
+    except Exception as e:
+      return {
+        "error": True,
+        "message": f"An error occurred for user {username}: {e}"
+      }
+
+  threshold = len(usernames) / 2
+  overlap_groups = defaultdict(list)
+  for key, count in movie_counts.items():
+    if count > threshold:
+      overlap_groups[count].append(movie_details[key])
+
+  return {
+    "error": False,
+    "overlap_groups": overlap_groups
+  }
+
+def find_user(input_user):
+  user1 = user.User(input_user)
+  return user.user_watchlist(user1)['data'].keys()

@@ -8,5 +8,5 @@ CORS(app)
 @app.route("/", methods=['POST'])
 def process_data():
   usernames = request.json['usernames']
-  result = {'movies': find_overlap(usernames)}
+  result = find_overlap(usernames)
   return jsonify(result)
