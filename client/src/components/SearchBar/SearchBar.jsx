@@ -23,6 +23,9 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => 
     if (!pattern.test(username)) {
       return false;
     }
+    if (usernames.includes(username)) {
+      return false;
+    }
     return true;
   }
 
@@ -60,7 +63,7 @@ export const SearchBar = ({ usernames, setUsernames, onSubmit, validArray }) => 
           Add User
         </button>
       </div>
-      {!validUsername && <p>Usernames must be 2-15 characters and only contain letters, numbers, or underscores.</p>}
+      {!validUsername && <p>Invalid or duplicate username. Please try again.</p>}
       {!validArray && <p>Please make sure you have between 2 and 10 users added.</p>}
       {usernames.length !== 0 && <Names usernames={usernames} onRemove={handleRemoveUser}/>}
       <SubmitUsers onSubmit={onSubmit}/>
