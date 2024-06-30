@@ -1,7 +1,23 @@
 .results-container {
   display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.group-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-container > p {
+  font-size: 1.4em;
+}
+
+.group-results {
+  display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  justify-content: center;
 }
 
 .result {
