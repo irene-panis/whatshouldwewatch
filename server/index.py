@@ -27,15 +27,10 @@ def find_overlap(usernames):
           'link': movie['url']
         }
       
-    except UserNotFoundException:
-      return {
-          "error": True,
-          "message": f"User {username} not found."
-      }
     except Exception as e:
       return {
         "error": True,
-        "message": f"An error occurred for user {username}: {e}"
+        "message": f"User {username} not found."
       }
 
   threshold = len(usernames) / 2

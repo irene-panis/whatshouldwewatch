@@ -57,7 +57,7 @@ function App() {
         </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers} validArray={validArray}/>
         {typeof results === 'string' && <Error error={results}/>}
-        {typeof results === 'object' && <Results results={results}/>}
+        {typeof results === 'object' && results !== null && <Results results={results}/>}
       </main>
       <Footer/>
     </>
