@@ -30,8 +30,11 @@ def find_overlap(usernames):
       user_wl = get_wl_from_letterboxd(username)
     else:
       user_wl = get_wl_from_cache(username)
+    
+    if user_wl.get('error'):
+      return user_wl
+    
     if not user_wl['data'].keys():
-      # Return a specific response for an empty watchlist
       return {
         "error": True,
         "message": f"Watchlist for user {username} is empty."
