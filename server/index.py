@@ -59,6 +59,5 @@ def find_overlap(usernames):
     "overlap_groups": overlap_groups
   }
 
-def find_user(input_user):
-  user1 = user.User(input_user)
-  return user.user_watchlist(user1)['data'].keys()
+def delete_cache(username):
+  cache.delete(username)
