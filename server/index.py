@@ -1,8 +1,8 @@
 from letterboxdpy import user
 from collections import defaultdict
+import redis
 
-class UserNotFoundException(Exception):
-  pass
+cache = redis.Redis(host='localhost', port=6379)
 
 def find_overlap(usernames):
   movie_counts = defaultdict(int)
