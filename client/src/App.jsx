@@ -55,6 +55,10 @@ function App() {
           <h1>what should we watch?</h1>
           <h2>Enter 2+ Letterboxd usernames below to find the overlap between your watchlists.</h2>
         </div>
+        <div className="buttons">
+          <a>About</a>
+          <a>Cache</a>
+        </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers} validArray={validArray}/>
         {typeof results === 'string' && <Error error={results}/>}
         {typeof results === 'object' && results !== null && <Results results={results}/>}

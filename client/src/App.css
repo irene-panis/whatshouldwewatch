@@ -30,3 +30,9 @@ h1 {
 h2 {
   font-size: 1em;
 }
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
