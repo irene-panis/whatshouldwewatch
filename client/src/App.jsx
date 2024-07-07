@@ -48,6 +48,12 @@ function App() {
     setValidArray(true);
   }, [usernames]);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  }
+
   return (
     <>
       <main>
