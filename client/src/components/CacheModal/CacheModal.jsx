@@ -1,0 +1,5 @@
+export const CacheModal = () => {
+  return (
+    <></>
+  )
+}
