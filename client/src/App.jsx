@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Results } from './components/Results/Results';
 import { Footer } from './components/Footer/Footer';
 import { Error } from './components/Error/Error';
+import { Modal } from './components/Modal/Modal';
 
 function App() {
   const [usernames, setUsernames] = useState([]);
@@ -62,8 +63,12 @@ function App() {
           <h2>Enter 2+ Letterboxd usernames below to find the overlap between your watchlists.</h2>
         </div>
         <div className="buttons">
-          <a>About</a>
-          <a>Cache</a>
+          <a
+            onClick={() => handleShowModal()}
+          > 
+            please read :)
+          </a>
+          <Modal showModal={showModal} setShowModal={setShowModal}/>
         </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers} validArray={validArray}/>
         {typeof results === 'string' && <Error error={results}/>}

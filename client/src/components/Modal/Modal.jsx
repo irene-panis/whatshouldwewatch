@@ -1,6 +1,7 @@
 import './Modal.css';
+import { AboutModal } from '../AboutModal/AboutModal';
 
-export const Modal = ({ showModal, setShowModal, children }) => {
+export const Modal = ({ showModal, setShowModal }) => {
   if (!showModal) return null;
   return (
     <div className="modal-overlay">
@@ -8,7 +9,7 @@ export const Modal = ({ showModal, setShowModal, children }) => {
         <button className="close-button" onClick={() => setShowModal(false)}>
           X
         </button>
-        {children}
+        <AboutModal/>
       </div>
     </div>
   );
