@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export const AboutModal = () => {
   return (
     <div className="modal-content">
