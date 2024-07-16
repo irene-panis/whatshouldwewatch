@@ -7,7 +7,11 @@ export const DeleteCache = () => {
     setInput(e.target.value);
   }
 
-  
+  const handleDeleteUser = async () => {
+    await fetch('http://localhost:5000', {
+      method: 'DELETE'
+    })
+  }
   return (
     <div className="delete-bar">
       <div>
