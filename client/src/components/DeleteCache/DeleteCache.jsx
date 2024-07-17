@@ -8,7 +8,7 @@ export const DeleteCache = () => {
   }
 
   const handleDeleteUser = async () => {
-    await fetch('http://localhost:5000', {
+    await fetch(`http://localhost:5000/${input}`, {
       method: 'DELETE'
     })
   }
