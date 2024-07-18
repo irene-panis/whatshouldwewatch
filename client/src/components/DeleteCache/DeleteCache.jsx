@@ -10,7 +10,8 @@ export const DeleteCache = () => {
   const handleDeleteUser = async () => {
     await fetch(`http://localhost:5000/${input}`, {
       method: 'DELETE'
-    })
+    });
+    setInput('');
   }
   return (
     <div className="delete-bar">
