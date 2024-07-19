@@ -36,3 +36,13 @@ h2 {
   display: flex;
   justify-content: space-evenly;
 }
+
+.buttons a {
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.buttons a:hover {
+  background-color: white;
+  cursor: pointer;
+}

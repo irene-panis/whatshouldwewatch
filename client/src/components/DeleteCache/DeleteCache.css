@@ -1,0 +1,8 @@
+.delete-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.delete-bar div {
+  width: 50%;
+}
