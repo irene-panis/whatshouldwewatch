@@ -6,3 +6,17 @@
 .delete-bar div {
   width: 50%;
 }
+
+.delete-bar button {
+  background: none;
+  border: 1px solid #40bcf4;
+  color: #40bcf4;
+  transition: 0.2s;
+}
+
+.delete-bar button:hover {
+  background-color: #40bcf4;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}

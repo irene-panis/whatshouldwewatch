@@ -4,3 +4,12 @@
   gap: 1rem;
   text-align: left;
 }
+
+.modal-text b,
+.modal-text i {
+  color: #00df53;
+}
+
+.modal-text span {
+  color: #40bcf4;
+}
