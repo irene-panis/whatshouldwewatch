@@ -14,4 +14,7 @@ def process_data():
 @app.route("/delete/<username>", methods=['DELETE'])
 def delete(username):
   delete_cache(username)
-  return jsonify({"message": f"Cache for user {username} cleared"}), 200
+  return jsonify({"message": f"User {username} deleted from cache"}), 200
+
+if __name__ == "__main__":
+  app.run(debug=True)
