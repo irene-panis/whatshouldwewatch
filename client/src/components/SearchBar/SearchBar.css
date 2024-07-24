@@ -17,9 +17,30 @@
 .bar-and-btn input {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 2px solid #00df53;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: #00df53;
 }
+
+.bar-and-btn button {
+  background-color: #00df53;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.bar-and-btn button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.bar-and-btn button:active {
+  transform: scale(0.9);
+}
+
 
 .bar-and-btn > div {
   flex: 1;

@@ -20,3 +20,7 @@
   border-radius: 0;
   appearance: none;
 }
+
+.name button:hover {
+  cursor: pointer;
+}
