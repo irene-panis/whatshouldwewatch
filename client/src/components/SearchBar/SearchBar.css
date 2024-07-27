@@ -17,15 +17,19 @@
 .bar-and-btn input {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: 2px solid white;
+  border-radius: 25px;
+  border: 1px solid #c7c7c7;
   color: #00df53;
+}
+
+.bar-and-btn input:focus {
+  outline: none;
 }
 
 .bar-and-btn button {
   background-color: #00df53;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 25px;
   border: none;
   padding: 0.5rem 1rem;
   transition: 0.2s ease-in-out;
