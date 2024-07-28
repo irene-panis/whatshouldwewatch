@@ -4,4 +4,9 @@ footer {
 
 footer a {
   color: white;
+  transition: 0.2s;
+}
+
+footer a:hover {
+  background-color: #fe7f00;
 }
