@@ -7,11 +7,24 @@
   width: 50%;
 }
 
+
+.delete-bar input {
+  background-color: transparent;
+  border: 1px solid #40bcf4;
+  color: #40bcf4;
+  padding: 0.5rem;
+}
+
+.delete-bar input:focus {
+  outline: none;
+}
+
 .delete-bar button {
   background: none;
   border: 1px solid #40bcf4;
   color: #40bcf4;
   transition: 0.2s;
+  padding: 0.5rem 0.75rem;
 }
 
 .delete-bar button:hover {
