@@ -5,7 +5,10 @@
   text-align: left;
 }
 
-.modal-text b,
+.modal-text b {
+  color: #fe7f00;
+}
+
 .modal-text i {
   color: #00df53;
 }
