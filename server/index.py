@@ -8,13 +8,14 @@ cache = redis.Redis(host='localhost', port=6379)
 def get_wl_from_letterboxd(username):
   try:
     user_instance = user.User(username)
-    user_wl = user.user_watchlist(user_instance)
+    movies = user_instance.get_watchlist_movies()
+    user_wl = { 'data': movies }
     cache.set(username, json.dumps(user_wl), ex=3600)
     return user_wl
   except Exception as e:
     return {
       "error": True,
-      "message": f"User {username} not found."
+      "message": f"{e}."
     }
 
 def get_wl_from_cache(username):
