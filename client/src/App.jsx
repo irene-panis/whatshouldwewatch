@@ -9,6 +9,7 @@ import { Modal } from './components/Modal/Modal';
 function App() {
   const [usernames, setUsernames] = useState([]);
   const [results, setResults] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // handle valid array error rendering
   const checkArray = (usernames) => {
@@ -41,7 +42,9 @@ function App() {
       setResults(null);
       return;
     }
+    setLoading(true);
     const data = await fetchData();
+    setLoading(false);
     setResults(data);
   }
 
@@ -66,13 +69,14 @@ function App() {
           <a
             onClick={() => handleShowModal()}
           > 
-            please read :)
+            how to use
           </a>
           <Modal showModal={showModal} setShowModal={setShowModal}/>
         </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers} validArray={validArray}/>
-        {typeof results === 'string' && <Error error={results}/>}
-        {typeof results === 'object' && results !== null && <Results results={results}/>}
+        {loading && <p>Loading results...</p>}
+        {!loading && typeof results === 'string' && <Error error={results}/>}
+        {!loading && typeof results === 'object' && results !== null && <Results results={results}/>}
       </main>
       <Footer/>
     </>
