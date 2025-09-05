@@ -64,6 +64,7 @@ function App() {
         <div className="text">
           <h1>what should we watch?</h1>
           <h2>Enter 2+ Letterboxd usernames below to find the overlap between your watchlists.</h2>
+          <h2>Please note longer watchlists can cause up to 20 seconds of loading time.</h2>
         </div>
         <div className="buttons">
           <a
@@ -74,7 +75,7 @@ function App() {
           <Modal showModal={showModal} setShowModal={setShowModal}/>
         </div>
         <SearchBar usernames={usernames} setUsernames={setUsernames} onSubmit={handleSubmitUsers} validArray={validArray}/>
-        {loading && <p>Loading results...</p>}
+        {loading && <p>loading results...</p>}
         {!loading && typeof results === 'string' && <Error error={results}/>}
         {!loading && typeof results === 'object' && results !== null && <Results results={results}/>}
       </main>
