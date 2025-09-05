@@ -13,7 +13,9 @@ The application is built with a React frontend and a Python Flask backend, where
 - React frontend with Flask backend API handling
 
 ## Preview
-<img width="732" height="366" alt="image" src="https://github.com/user-attachments/assets/c10dfb38-7092-432c-a25c-fa4096fe7f8c" />
+<img width="1185" height="577" alt="image" src="https://github.com/user-attachments/assets/48d6c54e-07b8-41bf-b9b6-a00db7721a12" />
+<img width="1085" height="610" alt="image" src="https://github.com/user-attachments/assets/ff934eb7-f1a4-4774-a34e-1948c4a10f09" />
+
 
 ## Deployment
 Currently, the project is set up for local development. Deployment is planned for both frontend and backend to allow public access.
