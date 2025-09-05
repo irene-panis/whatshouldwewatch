@@ -6,6 +6,7 @@ export const AboutModal = () => {
     <div className="modal-text">
       <p><b>what should we watch?</b> scrapes the letterboxd watchlists of the users provided and returns the movies present in all (or the majority of) the lists.</p>
       <p>a minimum of 2 users must be entered to scrape the lists, with a maximum of 10 users.</p>
+      <p><i>more watchlists to compare = slower loading times!!</i> but this is mitigated through caching.</p>
       <p>to avoid repeated scraping, <i>user watchlist data is cached for one hour after first retrieval.</i> this makes the app faster if you're sending multiple requests for the same watchlist. if a username is ran through the app and a change is made to the watchlist afterwards, it will not be reflected until the username is manually deleted from our cache or it expires after 1 hour.</p>
       <span>to force retrieve a user's latest data, delete them from the cache below:</span>
       <DeleteCache/>
