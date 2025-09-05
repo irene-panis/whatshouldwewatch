@@ -11,7 +11,7 @@ export const DeleteCache = () => {
   }
 
   const handleDeleteUser = async () => {
-    const response = await fetch(`http://localhost:5000/delete/${input}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/delete/${input}`, {
       method: 'DELETE'
     });
     const data = await response.json();
